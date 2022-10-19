@@ -1,0 +1,8 @@
+[alias]
+	co = checkout
+	cm = commit -m
+	ck = "!f() { [ $# -eq 0 ] && git checkout $(git branch --sort=-authordate | perl -a -nle '$F[0] ne \"*\" and print $F[0]' | fzf --height 40%) || git checkout $@; }; f"
+	dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
+[user]
+	email = hiromhiro617@gmail.com
+	name = hiromu617

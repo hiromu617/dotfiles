@@ -1,0 +1,4 @@
+eval "$(direnv hook zsh)"
+eval "$(rbenv init - zsh)"
+eval "$(nodenv init -)"
+eval source <(/usr/local/bin/starship init zsh --print-full-init)
