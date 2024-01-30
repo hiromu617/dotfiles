@@ -2,3 +2,10 @@ eval "$(direnv hook zsh)"
 eval "$(rbenv init - zsh)"
 eval "$(nodenv init -)"
 eval source <(/usr/local/bin/starship init zsh --print-full-init)
+
+format () {
+  dip bundle exec rubocop -A $1; dip yarn prettier --cache --write $1;
+}
+alias format='format'
+
+do
